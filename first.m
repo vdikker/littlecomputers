@@ -33,12 +33,11 @@
 
 - (void) hello
 {
-	NSLog(@"Hello, I'm your first Objective-C program!");
+	NSLog(@"Hello, I am your first ObjC program!");
 }
 
 - (void) dealloc
 {
-	// release any retained objects here.
 	[super dealloc];
 }
 
@@ -48,12 +47,11 @@ int main(int argc, char**argv)
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
-	// allocate an instance
 	MyClass *instance = [[MyClass alloc] init];
 	[instance hello];
 	
 	[instance setMyFloat: 10.0f];
-	NSLog(@"new value is %f", [instance myFloat]);
+	NSLog(@"New value is %f", [instance myFloat]);
 	
 	[pool release];
 	
