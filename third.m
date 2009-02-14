@@ -1,3 +1,5 @@
+// Objective C Assignment 3/3
+
 #import <Foundation/Foundation.h>
 
 @interface YourClass : NSObject
@@ -8,8 +10,6 @@
 - (NSString*) goodbye;
 
 @end
-
-// Objective C Assignment 3/3
 
 @interface MyClass : NSObject
 {
