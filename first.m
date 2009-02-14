@@ -1,3 +1,4 @@
+// Vitaliy Dikker
 // Objective C Assignment 1/3
 
 #import <Foundation/Foundation.h>
