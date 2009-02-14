@@ -1,3 +1,5 @@
+// Objective C Assignment 2/3
+
 #import <Foundation/Foundation.h>
 
 @interface MyClass : NSObject

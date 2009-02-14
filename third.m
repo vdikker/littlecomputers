@@ -9,6 +9,8 @@
 
 @end
 
+// Objective C Assignment 3/3
+
 @interface MyClass : NSObject
 {
 	float myFloat;
