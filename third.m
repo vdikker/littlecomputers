@@ -1,14 +1,5 @@
 #import <Foundation/Foundation.h>
 
-@interface MyClass : NSObject
-{
-	float myFloat;
-}
-
-- (void) hello;
-
-@end
-
 @interface YourClass : NSObject
 {
 	NSString* yourString;
@@ -18,7 +9,32 @@
 
 @end
 
+@interface MyClass : NSObject
+{
+	float myFloat;
+	YourClass* friend;
+}
+
+- (void) hello;
+
+@end
+
 @implementation MyClass
+
+- (void) setFriend:(YourClass*)pal
+{
+	if(friend != nil)
+	{
+		[friend release];
+	}
+	friend = pal;
+	[friend retain];
+}
+
+- (YourClass*)friend
+{
+	return friend;
+}
 
 - (void) setMyFloat:(float)val
 {
@@ -42,7 +58,7 @@
 
 - (void) hello
 {
-	NSLog(@"Hello, I am your third ObjC program!");
+	NSLog(@"Hello, I am your second ObjC program!");
 }
 
 - (void) dealloc
@@ -85,6 +101,10 @@ int main(int argc, char**argv)
 	
 	YourClass *yourinstance = [[YourClass alloc] init];
 	NSLog(@"'%@'", [yourinstance goodbye]);
+	
+	[instance setFriend:yourinstance];
+	
+	NSLog(@"This is my friend %@ and he says '%@'", [instance friend], [[instance friend] goodbye]);
 	
 	[pool release];
 	
